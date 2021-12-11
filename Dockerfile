@@ -28,5 +28,6 @@ COPY --from=build-image $BUILD_HOME/build/libs/aiode-1.0-SNAPSHOT.jar app.jar
 COPY --from=build-image $BUILD_HOME/versions.xml .
 COPY --from=build-image $BUILD_HOME/src/main/resources/liquibase/dbchangelog.xml liquibase/dbchangelog.xml
 
+EXPOSE 8080/tcp
 VOLUME [ "/data" ]
 ENTRYPOINT [ "java", "-jar", "app.jar" ]
