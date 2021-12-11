@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  db:
+    image: 'postgres:latest'
+    healthcheck:
+      test: [ "CMD", "pg_isready", "-q", "-d", "aiode", "-U", "postgres" ]
+      timeout: 45s
+      interval: 10s
+      retries: 10
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: aiode
+    volumes:
+      - db:/var/lib/postgresql/data/
+  aiode:
+    build: .
+    ports:
+      - 8000:8000
+    depends_on:
+      db:
+        condition: service_healthy
+
+volumes:
+  db:

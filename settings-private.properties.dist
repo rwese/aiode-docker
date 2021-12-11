@@ -1,0 +1,29 @@
+##########
+# tokens #
+##########
+aiode.tokens.discord_token=
+aiode.tokens.spotify_client_id=
+aiode.tokens.spotify_client_secret=
+aiode.tokens.youtube_credentials=
+############
+# security #
+############
+#define user ids (comma separated) that may access admin commands. These users can always use each command irregardless of access configurations
+aiode.security.admin_users=
+##############
+# datasource #
+##############
+spring.datasource.username=postgres
+spring.datasource.password=postgres
+########
+# IPv6 #
+########
+# list IPv6 blocks to use for the lavaplayer route planner (comma separated)
+aiode.preferences.ipv6_blocks=
+##############################
+# top.gg settings (optional) #
+##############################
+#copy your discord client id here
+aiode.tokens.discord_bot_id=
+#copy your top.gg token here
+aiode.tokens.topgg_token=
