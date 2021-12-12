@@ -13,3 +13,7 @@
 `https://discord.com/oauth2/authorize?client_id=__CLIENTID__&permissions=532680277057&scope=bot`
 
 ![](assets/permissions.png)
+
+# TODO
+
+* [ ] WebUi does not work, rust compilation works but mapping web assets does not
