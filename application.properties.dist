@@ -1,6 +1,9 @@
-###################
-# server settings #
-###################
+##################################################################
+# server settings                                                #
+# this file is just intend to override the default database host #
+# for use with docker-compose exposed ports and reverse proxies  #
+# you can change the urls and ports                              #
+##################################################################
 # legacy server
 aiode.server.port=8000
 aiode.server.base_uri=http://localhost:8000
@@ -8,6 +11,9 @@ aiode.server.spotify_login_callback=http://localhost:8000/login
 # rest api & new web client
 server.servlet.context-path=/
 server.port=8080
+
+#### Do NOT edit beyond this point, these settings are meant to work with this docker-compose setup
+
 # liquibase
 spring.liquibase.change-log=classpath:liquibase/dbchangelog.xml
 spring.liquibase.contexts=definition,initialvalue,constraint
